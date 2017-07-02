@@ -1,0 +1,45 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Find Ride</title>
+<link rel="stylesheet" type="text/css" href="../css/main.css">
+<link type="text/css" href="../css/jquery.simple-dtpicker.css" rel="stylesheet" />
+<script type="text/javascript" src="../scripts/jquery.min.js"></script>
+<script type="text/javascript" src="../scripts/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../scripts/jquery.simple-dtpicker.js"></script>
+
+
+<script>
+	$(function(){
+	$('#date_find').appendDtpicker({
+	"inline": true,
+	"allowWdays": [1, 2, 3, 4, 5] // 0: Sun, 1: Mon, 2: Tue, 3: Wed, 4: Thr, 5: Fri, 6: Sat
+});
+});
+</script>
+</head>
+
+<body id="main_body" >
+
+ <form class="container">
+ <fieldset>
+  <legend>Find your ride:</legend>
+    <label><b>From:*</b></label>
+    <input type="text" class="large" placeholder="From" id="from_find" name="from_find" required>
+	<br>
+    <label><b>To:*</b></label>
+    <input type="text" class="large" placeholder="To" name="to_find" required>
+	<br>
+    <label><b>Date of journey:*</b></label>
+    <input type="text" class="large" placeholder="DD/MM/YYYY" name="date_find" required>
+	
+
+    <div class="clearfix">
+      <button type="submit" value="Search"><img style="width:30px;height:15px;" src="../img/find.png"/></button>
+		<button type="reset" value="Reset">Reset</button>
+		</fieldset>
+  </form>
+	
+	
+</body>
+</html>

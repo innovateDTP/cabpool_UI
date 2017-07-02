@@ -1,0 +1,61 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Find Ride</title>
+<link rel="stylesheet" type="text/css" href="../css/main.css">
+<link type="text/css" href="../css/jquery.simple-dtpicker.css" rel="stylesheet" />
+<script type="text/javascript" src="../scripts/jquery.min.js"></script>
+<script type="text/javascript" src="../scripts/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../scripts/jquery.simple-dtpicker.js"></script>
+
+
+<script>
+	$(function(){
+	$('#date_find').appendDtpicker({
+	"inline": true,
+	"allowWdays": [1, 2, 3, 4, 5] // 0: Sun, 1: Mon, 2: Tue, 3: Wed, 4: Thr, 5: Fri, 6: Sat
+});
+});
+</script>
+</head>
+
+<body id="main_body" >
+
+ <form class="container">
+ <fieldset>
+  <legend>Find your ride:</legend>
+    <label><b>From:*</b></label>
+    <input type="text" placeholder="From" id="from_offer" class="small" name="from_offer" maxlength="100" required>
+	
+    <label style="margin-left:50px;"><b>To:*</b></label>
+    <input type="text" class="small" placeholder="To" name="to_offer" maxlength="100" required>
+	<br>
+	<label><b>Email:*</b></label>
+    <input type="text" class="large" placeholder="abc@cde.com" name="email" id="email" required>
+	<br>
+    <label><b>Date of journey:*</b></label>
+    <input type="text" class="large" placeholder="DD/MM/YYYY" name="date_offer" required>
+	<br>
+	<label style="margin-right:20px;"><b>Contact:*</b></label>
+    <input type="number"  class="small"  placeholder="xxxxxxxxxx" name="contact" id="contact" required >
+	
+	<label style="margin-right:5px;"><b>Alt Contact:</b></label>
+    <input type="number"  class="small" placeholder="xxxxxxxxxx" name="alt_contact" id="alt_contact" >
+	<br>
+	
+	<label><b>Vehicle No:*</b></label>
+    <input type="text" class="small" placeholder="Vehicle No" name="veh_no" id="veh_no" required>
+	
+	<label><b>Vehicle Type:*</b></label>
+    <input type="text" class="small" placeholder="Vehicle Type" name="veh_type" id="veh_type" required>
+   
+
+    <div class="clearfix">
+      <button type="submit" value="Publish">Publish</button>
+		<button type="reset" value="Reset">Reset</button>
+		</fieldset>
+  </form>
+	
+	
+</body>
+</html>
